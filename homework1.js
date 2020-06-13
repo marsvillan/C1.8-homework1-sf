@@ -16,9 +16,6 @@ const $ = (e) => new jQuery(e);
 
 $('button').click(e => console.log(e.target))
 
-
-//-----------------prototype.html-------------------------------------------------
-
 jQuery.prototype.html = function(newhtmls) {
     if (newhtmls === undefined) {
         this.each(element => element.innerHTML)
@@ -27,9 +24,3 @@ jQuery.prototype.html = function(newhtmls) {
     }
     return this;
 }
-
-
-//----------------------Проверка html------------------------------------------------------
-console.log($(".content").html("<button>but new</button>").elements[0])
-console.log($("#test").html("NEW Test_Html id_test").elements[0])
-console.log($("button").html().elements[0])
